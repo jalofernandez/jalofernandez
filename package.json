@@ -1,0 +1,26 @@
+{
+  "name": "jalofernandez",
+  "version": "1.0.0",
+  "description": "My own online portfolio and skills resume",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalofernandez/jalofernandez.git"
+  },
+  "author": "jalofernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jalofernandez/jalofernandez/issues"
+  },
+  "homepage": "https://github.com/jalofernandez/jalofernandez#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-uglify": "^2.0.0"
+  }
+}
