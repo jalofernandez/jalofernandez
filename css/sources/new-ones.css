@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:400,600,700');
+
+/* ... HEADERS & TITLES ... */
 .bl-box h2.main-title {
 	font-size: 70px;
+    text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 
-.bl-main > section:hover {
-    background-color: rgba(255,255,255,.05)
+@media screen and (min-width: 768px) {
+    .bl-box h2.main-title {
+	   font-size: 70px;
+    }
+    .bl-main > section:hover {
+        background-color: rgba(255,255,255,.05);
+    }
 }
