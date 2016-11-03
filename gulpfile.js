@@ -35,7 +35,7 @@ gulp.task('css', function() {
 * Configuración de la tarea 'img' --> gulp-imagemin (gulp img)
 */
 gulp.task('img', function () {
-    return gulp.src(['img/*/*.*'])
+    return gulp.src(['img/sources/*/*.*'])
         .pipe(imagemin())
         .pipe(gulp.dest('img/dist'));
 });

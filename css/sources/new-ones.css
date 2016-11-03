@@ -2,7 +2,7 @@
 
 /* ... HEADERS & TITLES ... */
 .bl-box h2.main-title {
-	font-size: 70px;
+	padding-bottom: 0;
     text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 
@@ -13,4 +13,23 @@
     .bl-main > section:hover {
         background-color: rgba(255,255,255,.05);
     }
+}
+
+.bl-box h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    margin-top: 0;
+    color: #cab68e; /* main Beige color */
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    position: relative;
+    bottom: 92px;
+    -webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.main-pic {
+    width: 200px;
+    height: 190px;
 }
