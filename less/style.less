@@ -7,6 +7,12 @@
 
 /* --- common MIXINS -------------------------------- */
 
+.text-block {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    line-height: 25px;
+}
+
 .anim-150 {
     -moz-transition: all 150ms ease-in;
     -webkit-transition: all 150ms ease-in;
@@ -69,17 +75,6 @@ p {
     margin-top: 50px;
 }
 
-/* --- Article :: Works :: details --- */
-
-.bl-content {
-    article {
-        h3,
-        p {
-            color:#0ec2a1;
-        }
-    }
-}
-
 /* --- common CONTAINER - MAIN FRAME -------------------------------- */
 
 .container {
@@ -137,13 +132,10 @@ p {
             pointer-events: none;
             font-size: 50px;
             .anim-150;
-
-            &:before {
-                content: "X";
-            }
             
             &:hover {
                 color: @main-color;
+                .anim-150;
             }
         }
     }
@@ -190,14 +182,12 @@ p {
         font-weight: 700;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        text-shadow: 0 1px #000,
-                    1px 0 #000,
-                    -1px 0 #000,
-                    0 -1px #000,
-                    -1px -1px #000,
-                    1px 1px #000,
-                    1px -1px #000,
-                    -1px 1px #000;
+        .text-shadow;
+        
+        i {
+            padding-right: 15px;
+            color: @white;
+        }
     }
 }
 
@@ -249,12 +239,14 @@ div.bl-panel-items > div > div {
             .text-shadow;
         }
         
-        a:hover {
-            color: @grey-3;
-            -moz-transition: all 500ms ease-in;
-             -webkit-transition: all 500ms ease-in;
-              -o-transition: all 500ms ease-in;
-                 transition: all 500ms ease-in;
+        a,
+        a i {
+            color: @white;
+            
+            &:hover {
+                color: @main-color;
+                .anim-150;
+            }
         }
     }
     
@@ -291,7 +283,7 @@ div.bl-panel-items > div > div {
     
     // Subsection
     article {
-        padding: 20px 40px 20px 0px;
+        padding: 10px 40px 10px 0px;
         
         h3 {
             font-weight: 700;
@@ -300,10 +292,21 @@ div.bl-panel-items > div > div {
             margin: 0 0 10px 0;
             padding-top: 20px;
             font-size: 1.4em;
+            color: @main-color;
+            
+            i {
+                font-size: 1em;
+            }
             
             a {
                 color: rgba(0,0,0,0.2);
             }
+        }
+        
+        p {
+            padding-left: 44px;
+            color: @white;
+            .text-block;
         }
     }
 }
@@ -593,24 +596,12 @@ section.bl-expand {
 }
 
 
-// ICOMOON ICONS:
-.icon-facebook3:before {
-	content: "\e76b";
-}
-.icon-pinterest:before {
-	content: "\e7a6";
-}
-.icon-instagram3:before {
-	content: "\e94f";
-}
-
-
-
-
 .main-pic {
     width: 200px;
     height: 190px;
 }
+
+
 
 
 /* --- common MEDIA QUERIES -------------------------------- */
@@ -641,6 +632,24 @@ section.bl-expand {
     }
     .bl-main > section:hover {
         background-color: rgba(255,255,255,.05);
+    }
+    
+    /* ... Mis Habilidades section ... */
+    section.section-two {
+        .bl-content {
+            article {
+                display: inline-block;
+                width: 48%;
+                min-height: 180px;
+
+                &:nth-child(odd) {
+                    float: left;
+                }
+                &:nth-child(even) {
+                    float: right;
+                }
+            }
+        }
     }
 }
 

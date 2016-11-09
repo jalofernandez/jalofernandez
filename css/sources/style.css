@@ -1,6 +1,6 @@
 /* ... VARIABLES ... */
 /* main Beige color */
-/* main Turquesa */
+/* white color */
 /* ... MIXINS ... */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:400,600,700');
@@ -9,6 +9,11 @@
 }
 /* --- common FONTS -------------------------------- */
 /* --- common MIXINS -------------------------------- */
+.text-block {
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  line-height: 25px;
+}
 .anim-150 {
   -moz-transition: all 150ms ease-in;
   -webkit-transition: all 150ms ease-in;
@@ -65,11 +70,6 @@ p {
   height: auto;
   margin-top: 50px;
 }
-/* --- Article :: Works :: details --- */
-.bl-content article h3,
-.bl-content article p {
-  color: #0ec2a1;
-}
 /* --- common CONTAINER - MAIN FRAME -------------------------------- */
 .container {
   height: 100%;
@@ -123,11 +123,12 @@ p {
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
 }
-.bl-main > section .bl-icon-close:before {
-  content: "X";
-}
 .bl-main > section .bl-icon-close:hover {
   color: #cab68e;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }
 .bl-box {
   position: relative;
@@ -171,6 +172,10 @@ p {
   text-transform: uppercase;
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
+.bl-box h2 i {
+  padding-right: 15px;
+  color: #fff;
+}
 .bl-white h2 {
   color: #fff;
 }
@@ -200,7 +205,7 @@ div.bl-panel-items > div > div {
 .bl-content p {
   margin: 0 auto;
   padding-bottom: 15px;
-  color: #0ec2a1;
+  color: #fff;
   font-size: 1.7em;
   line-height: 1.8;
 }
@@ -208,12 +213,17 @@ div.bl-panel-items > div > div {
   color: #cab68e;
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
-.bl-content p a:hover {
-  color: #333;
-  -moz-transition: all 500ms ease-in;
-  -webkit-transition: all 500ms ease-in;
-  -o-transition: all 500ms ease-in;
-  transition: all 500ms ease-in;
+.bl-content p a,
+.bl-content p a i {
+  color: #fff;
+}
+.bl-content p a:hover,
+.bl-content p a i:hover {
+  color: #cab68e;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }
 .bl-content i {
   color: #fff;
@@ -240,7 +250,7 @@ div.bl-panel-items > div > div {
   max-width: 100%;
 }
 .bl-content article {
-  padding: 20px 40px 20px 0px;
+  padding: 10px 40px 10px 0px;
 }
 .bl-content article h3 {
   font-weight: 700;
@@ -249,9 +259,20 @@ div.bl-panel-items > div > div {
   margin: 0 0 10px 0;
   padding-top: 20px;
   font-size: 1.4em;
+  color: #cab68e;
+}
+.bl-content article h3 i {
+  font-size: 1em;
 }
 .bl-content article h3 a {
   color: rgba(0, 0, 0, 0.2);
+}
+.bl-content article p {
+  padding-left: 44px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  line-height: 25px;
 }
 /* --- common SubSECTION "PORTFOLIO" - "WORKS" -------------------------------- */
 div.bl-panel-items {
@@ -466,22 +487,13 @@ section.bl-expand .bl-icon-close {
   transition: opacity 0.3s linear 0.5s;
 }
 .turquesa h2 {
-  border-bottom: 1px solid #0ec2a1;
+  border-bottom: 1px solid #fff;
 }
 .turquesa p,
 .turquesa i,
 .turquesa span,
 .turquesa h2 {
-  color: #0ec2a1;
-}
-.icon-facebook3:before {
-  content: "\e76b";
-}
-.icon-pinterest:before {
-  content: "\e7a6";
-}
-.icon-instagram3:before {
-  content: "\e94f";
+  color: #fff;
 }
 .main-pic {
   width: 200px;
@@ -506,6 +518,18 @@ section.bl-expand .bl-icon-close {
   }
   .bl-main > section:hover {
     background-color: rgba(255, 255, 255, 0.05);
+  }
+  /* ... Mis Habilidades section ... */
+  section.section-two .bl-content article {
+    display: inline-block;
+    width: 48%;
+    min-height: 180px;
+  }
+  section.section-two .bl-content article:nth-child(odd) {
+    float: left;
+  }
+  section.section-two .bl-content article:nth-child(even) {
+    float: right;
   }
 }
 @media screen and (max-width: 768px) {

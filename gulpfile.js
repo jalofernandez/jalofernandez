@@ -8,12 +8,18 @@ cleanCSS = require('gulp-clean-css'),
 imagemin = require('gulp-imagemin'),
     less = require('gulp-less'),
     path = require('path'),
+    jade = require('gulp-jade'),
  sitemap = require('gulp-sitemap');
 
 /*
-* Configuración de la tarea 'default' (gulp)
+* Configuración de la tarea 'default' (gulp) for Templates/Views and Styles DEVELOPMENT
 */
-gulp.task('default', ['js', 'css', 'img']);
+gulp.task('default', ['less', 'css', 'jade']);
+
+/*
+* Configuración de la tarea 'deploy' (gulp deploy) for PRODUCTION upgrade
+*/
+gulp.task('deploy', ['less', 'css', 'jade', 'img', 'js', 'sitemap']);
 
 /*
 * Configuración de la tarea 'js' --> gulp-concat + gulp-uglify (gulp js)
@@ -51,6 +57,17 @@ gulp.task('less', function () {
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
     .pipe(gulp.dest('./css/sources'));
+});
+/*
+* Configuración de la tarea 'jade' --> gulp-jade (gulp jade)
+*/
+gulp.task('jade', function () {
+  var YOUR_LOCALS = {};
+  gulp.src('./templates/*.jade')
+    .pipe(jade({
+      locals: YOUR_LOCALS
+    }))
+    .pipe(gulp.dest('./'));
 });
 /*
 * Configuración de la tarea 'sitemap' --> gulp-sitemap (gulp sitemap)
