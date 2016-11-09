@@ -5,29 +5,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:400,600,700');
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('../../fonts/icomoon.eot');
-	src:url('../../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../../fonts/icomoon.woff') format('woff'),
-		url('../../fonts/icomoon.ttf') format('truetype'),
-		url('../../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+/* --- common MIXINS -------------------------------- */
 
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.anim-150 {
+    -moz-transition: all 150ms ease-in;
+    -webkit-transition: all 150ms ease-in;
+    -o-transition: all 150ms ease-in;
+    transition: all 150ms ease-in;
 }
 
 /* --- common BODY -------------------------------- */
@@ -151,9 +135,15 @@ p {
             z-index: 100;
             opacity: 0;
             pointer-events: none;
+            font-size: 50px;
+            .anim-150;
 
             &:before {
-                content: "\e6fd";
+                content: "X";
+            }
+            
+            &:hover {
+                color: @main-color;
             }
         }
     }
@@ -216,42 +206,6 @@ p {
         color:@white;
     }
 }
-
-/*
-.bl-icon {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	cursor: pointer;
-	-webkit-font-smoothing: antialiased;
-}
-
-.bl-icon:before {
-	display: block;
-	font-size: 1.8em;
-	margin-bottom: 15px;
-}
-
-.bl-icon-about:before {
-	content: "\e000";
-}
-
-.bl-icon-portfolio:before {
-	content: "\e7f9";
-}
-
-.bl-icon-lightbulb:before {
-	content: "\e7c8";
-}
-
-.bl-icon-envelope2:before {
-	content: "\e7e4";
-}
-*/
 
 /* --- common CONTENT for All views -------------------------------- */
 
@@ -574,11 +528,11 @@ div.bl-panel-items {
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
-    }
-    
-    &.main-title {
-        padding-bottom: 0;
-        .text-shadow;
+        
+        &.main-title {
+            padding-bottom: 0;
+            .text-shadow;
+        }
     }
 }
 
@@ -680,11 +634,24 @@ section.bl-expand {
 // NOT TABLETS & MOBILE DEVICES:
 
 @media screen and (min-width: 768px) {
-    .bl-box h2.main-title {
-	   font-size: 70px;
+    .bl-box {
+        h2.main-title {
+           font-size: 70px;
+        }
     }
     .bl-main > section:hover {
         background-color: rgba(255,255,255,.05);
+    }
+}
+
+// TABLETS & MOBILE DEVICES:
+
+@media screen and (max-width: 768px) {
+    .bl-box {
+        h1 {
+           font-size: 12px;
+            bottom: 145px;
+        }
     }
 }
 

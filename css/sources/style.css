@@ -8,25 +8,12 @@
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 /* --- common FONTS -------------------------------- */
-@font-face {
-  font-family: 'icomoon';
-  src: url('../../fonts/icomoon.eot');
-  src: url('../../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../../fonts/icomoon.woff') format('woff'), url('../../fonts/icomoon.ttf') format('truetype'), url('../../fonts/icomoon.svg#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* --- common MIXINS -------------------------------- */
+.anim-150 {
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }
 /* --- common BODY -------------------------------- */
 body,
@@ -130,9 +117,17 @@ p {
   z-index: 100;
   opacity: 0;
   pointer-events: none;
+  font-size: 50px;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }
 .bl-main > section .bl-icon-close:before {
-  content: "\e6fd";
+  content: "X";
+}
+.bl-main > section .bl-icon-close:hover {
+  color: #cab68e;
 }
 .bl-box {
   position: relative;
@@ -179,41 +174,6 @@ p {
 .bl-white h2 {
   color: #fff;
 }
-/*
-.bl-icon {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	cursor: pointer;
-	-webkit-font-smoothing: antialiased;
-}
-
-.bl-icon:before {
-	display: block;
-	font-size: 1.8em;
-	margin-bottom: 15px;
-}
-
-.bl-icon-about:before {
-	content: "\e000";
-}
-
-.bl-icon-portfolio:before {
-	content: "\e7f9";
-}
-
-.bl-icon-lightbulb:before {
-	content: "\e7c8";
-}
-
-.bl-icon-envelope2:before {
-	content: "\e7e4";
-}
-*/
 /* --- common CONTENT for All views -------------------------------- */
 .bl-content,
 div.bl-panel-items > div > div {
@@ -474,7 +434,7 @@ div.bl-panel-items.bl-panel-items-show nav span {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.bl-box.main-title {
+.bl-box h2.main-title {
   padding-bottom: 0;
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
@@ -546,5 +506,11 @@ section.bl-expand .bl-icon-close {
   }
   .bl-main > section:hover {
     background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+@media screen and (max-width: 768px) {
+  .bl-box h1 {
+    font-size: 12px;
+    bottom: 145px;
   }
 }
