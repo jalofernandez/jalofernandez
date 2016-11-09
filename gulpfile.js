@@ -5,7 +5,10 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
 cleanCSS = require('gulp-clean-css'),
-imagemin = require('gulp-imagemin');
+imagemin = require('gulp-imagemin'),
+    less = require('gulp-less'),
+    path = require('path'),
+ sitemap = require('gulp-sitemap');
 
 /*
 * Configuración de la tarea 'default' (gulp)
@@ -38,4 +41,28 @@ gulp.task('img', function () {
     return gulp.src(['img/sources/*/*.*'])
         .pipe(imagemin())
         .pipe(gulp.dest('img/dist'));
+});
+/*
+* Configuración de la tarea 'less' --> gulp-less (gulp less)
+*/
+gulp.task('less', function () {
+  return gulp.src('./less/**/*.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./css/sources'));
+});
+/*
+* Configuración de la tarea 'sitemap' --> gulp-sitemap (gulp sitemap)
+*/
+gulp.task('sitemap', function () {
+    gulp.src('*.html', {
+            read: false
+        })
+        .pipe(sitemap({
+            siteUrl: 'http://www.jalofernandez.com',
+            changefreq: 'weekly',
+            priority: '1.0'
+        }))
+        .pipe(gulp.dest('./'));
 });

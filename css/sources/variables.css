@@ -1,0 +1,7 @@
+/* ... VARIABLES ... */
+/* main Beige color */
+/* main Turquesa */
+/* ... MIXINS ... */
+.text-shadow {
+  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+}
