@@ -10,7 +10,7 @@ html(lang='en')
     meta(name='author', content='')
     link(rel='shortcut icon', href='img/dist/favicon/favicon.ico')
     // Custom Styles
-    link(rel='stylesheet', type='text/css', href='css/dist/style.css')
+    link(rel='stylesheet', type='text/css', href='css/sources/style.css')
     // Font Awesome styles
     link(rel='stylesheet', type='text/css', href='css/dist/font-awesome.css')
     script(src='js/dist/modernizr.custom.js')
@@ -23,8 +23,7 @@ html(lang='en')
           /////////////////////////////////////////////////////////////////////
         section.section-one
           .bl-box.bl-white
-            //
-              <img class="main-pic" src="img/sources/dino.png" alt="Logotipo de jalofernandez Designs & Websites"/>
+            img.logointro(src='img/dist/logos/jalofernandez-logo.svg', alt='Logotipo de Jalofernandez', title='Logotipo de Jalofernandez')
             h2.main-title jalofernández
             h1 all graphics, websites & beyond!
           .bl-content
@@ -38,12 +37,58 @@ html(lang='en')
               |  y 
               span webmaster
               |  a tiempo completo en Madrid, España. Me entusiasma el diseño preciosista y llamativo pero siempre claro, amigable y práctico.
-            p
-              | Para conocer mejor mi experiencia profesional y mis conocimientos técnicos aquí tienes mi 
-              span Curriculum Vitae
-              | :
-            //
-              <br/>Puedes seguir mis trabajos y publicaciones en <a href="" title="Ir al perfil de Facebook de Very very Designs"><i class="icon-facebook3"></i></a> <a href="" title="Ir al perfil de Instagram de Very very Designs"><i class="icon-instagram3"></i></a> <a href="" title="Ir al perfil de Pinterest de Very very Designs"><i class="icon-pinterest"></i></a>
+            article
+              h3
+                i.fa.fa-flag
+                | Identidad corporativa:
+              p
+                | Diseño la identidad de su marca bajo una personalidad propia, moderna y visualmente atractiva.
+            article
+              h3
+                i.fa.fa-pencil
+                | Diseño gráfico:
+              p
+                | Creación de piezas con un toque distintivo, artístico y práctico. Abarco el diseño publicitario, editorial, recreativo...
+            article
+              h3
+                i.fa.fa-print
+                | Impresión:
+              p
+                | La mejor calidad de impresión en tus proyectos de pequeño, mediano y gran formato como papelería corporativa, tarjetas de visita, cartelería, folletos...
+            article
+              h3
+                i.fa.fa-globe
+                | Diseño web:
+              p
+                | Tus proyectos online bajo una perspectiva moderna, atractiva y fácil de usar con las mejores optimizaciones de velocidad y posicionamiento (SEO).
+            article
+              h3
+                i.fa.fa-share-alt
+                | Community manager:
+              p
+                | Manejo de las redes sociales como medio indispensable para potenciar tu marca y sus productos en la red.
+            article
+              h3
+                i.fa.fa-envelope-o
+                | Emailing:
+              p
+                | Rapidez, eficacia y seguridad a la hora de mandar tus avisos y promociones via email.
+            article
+              h3
+                i.fa.fa-film
+                | Edición de vídeo:
+              p
+                | Grabación y postproducción de sus proyectos videográficos ya sean para el mercado doméstico u online.
+            article
+              h3
+                i.fa.fa-camera-retro
+                | Fotografía:
+              p
+                | La mejor calidad en tus proyectos fotográficos ya sean publicitarios o de branding.
+            .clearfix
+            .logo-block
+                img.logointro(src='img/dist/logos/jalofernandez-logo.svg', alt='Logotipo de Jalofernandez', title='Logotipo de Jalofernandez')
+                p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
         //
@@ -55,57 +100,72 @@ html(lang='en')
             h2
               i.fa.fa-magic
               span.subtext mis
-              |  HABILIDADES
+              | HABILIDADES
           .bl-content
             h2 Mis Hablilidades
             article
               h3
-                i.fa.fa-flag
-                |  IDENTIDAD CORPORATIVA:
+                i.fa.fa-file-image-o
+                | Grafismos:
               p
-                | Diseño la identidad de su marca bajo una personalidad propia, moderna y visualmente atractiva.
+                | Photoshop, Illustrator, Freehand, Pixelmator...
             article
               h3
-                i.fa.fa-pencil
-                |  DISEÑO GRÁFICO:
+                i.fa.fa-object-group
+                | Maquetación:
               p
-                | Creación de piezas con un toque distintivo, artístico y práctico. Abarco el diseño publicitario, editorial, recreativo...
+                | InDesign, QuarkXpress
             article
               h3
-                i.fa.fa-print
-                |  IMPRESIÓN:
+                i.fa.fa-camera
+                | Fotografía:
               p
-                | La mejor calidad de impresión en tus proyectos de pequeño, mediano y gran formato como papelería corporativa, tarjetas de visita, cartelería, folletos...
+                | Fotógrafo con equipo profesional propio y experiencia demostrable con book.
             article
               h3
-                i.fa.fa-globe
-                |  DISEÑO WEB:
+                i.fa.fa-video-camera
+                | Vídeo:
               p
-                | Tus proyectos online bajo una perspectiva moderna, atractiva y fácil de usar con las mejores optimizaciones de velocidad y posicionamiento (SEO).
+                | Premiere Pro, Final Cut, After Effects, Blender.
             article
               h3
-                i.fa.fa-share-alt
-                |  COMUNITY MANAGER:
+                i.fa.fa-code
+                | Programación:
               p
-                | Manejo de las redes sociales como medio indispensable para potenciar tu marca y sus productos en la red.
+                i.fa.fa-html5
+                | HTML5
+              p
+                i.fa.fa-css3
+                | CSS3
+              p
+                i.fa.fa-file-code-o
+                | JavaScript
+              p
+                i.fa.fa-git
+                | Git, Subversion (control versiones)
+              p
+                i.fa.fa-hashtag
+                | Gulp (task runner), Bower, node (package manager)
             article
               h3
                 i.fa.fa-envelope-o
-                |  EMAILING:
+                | Entornos:
               p
-                | Rapidez, eficacia y seguridad a la hora de mandar tus avisos y promociones via email.
-            article
-              h3
-                i.fa.fa-film
-                |  EDICIÓN de VIDEO:
+                i.fa.fa-apple
+                | Mac OS / iOS
               p
-                | Grabación y postproducción de sus proyectos videográficos ya sean para el mercado doméstico u online.
-            article
-              h3
-                i.fa.fa-camera-retro
-                |  FOTOGRAFÍA:
+                i.fa.fa-windows
+                | Windows
               p
-                | La mejor calidad en tus proyectos fotográficos ya sean publicitarios o de branding.    
+                i.fa.fa-android
+                | Android
+              p
+                i.fa.fa-linux
+                | Ubuntu (Linux)
+            .clearfix
+            .logo-block
+                img.logointro(src='img/dist/logos/jalofernandez-logo.svg', alt='Logotipo de Jalofernandez', title='Logotipo de Jalofernandez')
+                p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
         //
@@ -117,8 +177,8 @@ html(lang='en')
             h2
               i.fa.fa-briefcase
               span.subtext algunos de mis
-              |  PROYECTOS
-          .bl-content.turquesa
+              | PROYECTOS
+          .bl-content
             h2 Portafolio de Proyectos
             p Aquí te presentamos algunos de nuestros diseños e ideas de decoración:
             ul#bl-work-items
@@ -146,8 +206,9 @@ html(lang='en')
               li(data-panel='panel-2')
                 a(href='#', title='')
                   img(src='images/2.jpg', alt='')
-            img.logointro(src='images/veryverydesign2.png', alt='Logotipo de Very Very Designs')
-            p Diseño y programación
+            .logo-block
+                img.logointro(src='img/dist/logos/jalofernandez-logo.svg', alt='Logotipo de Jalofernandez', title='Logotipo de Jalofernandez')
+                p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
         //
@@ -159,15 +220,13 @@ html(lang='en')
             h2
               i.fa.fa-paper-plane-o
               span.subtext EN
-              |  CONTACTO
-          .bl-content.turquesa
+              | CONTACTO
+          .bl-content
             h2 En Contacto
-            p Javier Lorenzo Fernández
+            p.italic Javier Lorenzo Fernández
             p Madrid, Spain
-            p
-              a(href='tel:696682791', title='Llamar a Jalofernandez')
-                i.fa.fa-phone
-                |  (+0034) 696 682 791
+            p.contact-phone
+              a(href='tel:696682791', title='Llamar a Jalofernandez') (+0034) 696 682 791
             p
               a(href='https://www.facebook.com/jalofernandez?ref=tn_tnmn', target="_blank", title='Ir al perfil de Facebook de Jalofernandez')
                 i.fa.fa-facebook
@@ -181,7 +240,7 @@ html(lang='en')
                 i.fa.fa-github
               a(href='mailto:jalofernandez@gmail.com', title='Escribir email a Jalofernandez')
                 i.fa.fa-envelope-o
-            img.logointro(src='images/veryverydesign2.png', alt='Logotipo de Very Very Designs')
+            img.logointro(src='img/dist/logos/jalofernandez-logo.svg', alt='Logotipo de Jalofernandez', title='Logotipo de Jalofernandez')
             p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close

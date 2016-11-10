@@ -1,13 +1,9 @@
 /* ... VARIABLES ... */
 /* main Beige color */
 /* white color */
-/* ... MIXINS ... */
+/* --- common FONTS -------------------------------- */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:400,600,700');
-.text-shadow {
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
-}
-/* --- common FONTS -------------------------------- */
 /* --- common MIXINS -------------------------------- */
 .text-block {
   font-size: 18px;
@@ -19,6 +15,20 @@
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
+}
+.italic {
+  font-style: italic;
+}
+.text-shadow {
+  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 /* --- common BODY -------------------------------- */
 body,
@@ -60,15 +70,23 @@ p {
   color: #fff;
 }
 .subtext {
+  padding-right: 10px;
   font-family: 'Handlee', verdana, sans-serif;
   font-size: 1.2em;
   letter-spacing: .01em;
   text-transform: lowercase;
 }
 .logointro {
-  max-width: 216px;
+  max-width: 100px;
   height: auto;
   margin-top: 50px;
+}
+.logointro + p {
+  font-family: 'Handlee', verdana, sans-serif;
+  font-size: 20px !important;
+  color: #cab68e !important;
+  letter-spacing: .02em !important;
+  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 /* --- common CONTAINER - MAIN FRAME -------------------------------- */
 .container {
@@ -196,10 +214,10 @@ div.bl-panel-items > div > div {
 .bl-content h2 {
   font-family: 'Handlee', verdana, sans-serif;
   letter-spacing: .01em;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 300;
-  color: #fff;
-  border-bottom: 1px solid #fff;
+  color: #cab68e;
+  border-bottom: 1px solid #cab68e;
   margin: 0 0 20px 0;
 }
 .bl-content p {
@@ -225,9 +243,18 @@ div.bl-panel-items > div > div {
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
 }
+.bl-content p.contact-phone {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+.bl-content p.contact-phone a {
+  font-size: 22px;
+  font-weight: 400;
+}
 .bl-content i {
   color: #fff;
-  font-size: 1.4em;
+  font-size: 35px;
   padding: 0 5px;
 }
 .bl-content > ul {
@@ -253,13 +280,13 @@ div.bl-panel-items > div > div {
   padding: 10px 40px 10px 0px;
 }
 .bl-content article h3 {
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   margin: 0 0 10px 0;
   padding-top: 20px;
-  font-size: 1.4em;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: #cab68e;
+  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 .bl-content article h3 i {
   font-size: 1em;
@@ -268,11 +295,19 @@ div.bl-panel-items > div > div {
   color: rgba(0, 0, 0, 0.2);
 }
 .bl-content article p {
-  padding-left: 44px;
+  padding-left: 35px;
   color: #fff;
   font-size: 18px;
   letter-spacing: 0.02em;
   line-height: 25px;
+}
+.bl-content article p i {
+  font-size: 20px;
+  padding-right: 12px;
+}
+.bl-content .logo-block {
+  width: 100%;
+  text-align: center;
 }
 /* --- common SubSECTION "PORTFOLIO" - "WORKS" -------------------------------- */
 div.bl-panel-items {
@@ -445,7 +480,7 @@ div.bl-panel-items.bl-panel-items-show nav span {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   position: relative;
-  bottom: 92px;
+  bottom: 22px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -456,6 +491,7 @@ div.bl-panel-items.bl-panel-items-show nav span {
   transition: all 0.2s ease-in-out;
 }
 .bl-box h2.main-title {
+  font-size: 3.5em;
   padding-bottom: 0;
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
@@ -486,18 +522,13 @@ section.bl-expand .bl-icon-close {
   -moz-transition: opacity 0.3s linear 0.5s;
   transition: opacity 0.3s linear 0.5s;
 }
-.turquesa h2 {
-  border-bottom: 1px solid #fff;
-}
-.turquesa p,
-.turquesa i,
-.turquesa span,
-.turquesa h2 {
-  color: #fff;
-}
 .main-pic {
   width: 200px;
   height: 190px;
+}
+/* --- "CONTACT" block SECTION -------------------------------- */
+section.section-four .bl-content {
+  text-align: center;
 }
 /* --- common MEDIA QUERIES -------------------------------- */
 @media screen and (max-width: 46.5em) {
@@ -515,26 +546,36 @@ section.bl-expand .bl-icon-close {
 @media screen and (min-width: 768px) {
   .bl-box h2.main-title {
     font-size: 70px;
+    padding-top: 0;
   }
   .bl-main > section:hover {
     background-color: rgba(255, 255, 255, 0.05);
   }
-  /* ... Mis Habilidades section ... */
+  /* ... "Sobre Mi" & "Mis Habilidades" Sections ... */
+  section.section-one .bl-content article,
   section.section-two .bl-content article {
     display: inline-block;
     width: 48%;
-    min-height: 180px;
+    overflow: auto;
   }
-  section.section-two .bl-content article:nth-child(odd) {
+  section.section-one .bl-content article:nth-child(even),
+  section.section-two .bl-content article:nth-child(even) {
     float: left;
   }
-  section.section-two .bl-content article:nth-child(even) {
+  section.section-one .bl-content article:nth-child(odd),
+  section.section-two .bl-content article:nth-child(odd) {
     float: right;
+  }
+  section.section-one .bl-content article {
+    min-height: 180px;
+  }
+  section.section-two .bl-content article {
+    min-height: 145px;
   }
 }
 @media screen and (max-width: 768px) {
   .bl-box h1 {
-    font-size: 12px;
-    bottom: 145px;
+    font-size: 16px;
+    bottom: 35px;
   }
 }
