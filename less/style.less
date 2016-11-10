@@ -737,7 +737,7 @@ section.section-four {
     }
 }
 
-// TABLETS & MOBILE DEVICES:
+// TABLETS & SMALL DEVICES:
 
 @media screen and (max-width: 768px) {
     .bl-box {
@@ -748,7 +748,14 @@ section.section-four {
     }
 }
 
+// SMARTPHONES and MOBILE DEVICES
+
 @media screen and (max-width: 599px) {
+    // Main Logo in Main - Intro View
+    .logointro {
+        margin-top: 20px;
+    }
+    
     // SubSections container
     .bl-content, 
     div.bl-panel-items > div > div {
@@ -758,21 +765,41 @@ section.section-four {
         bottom: 30px;
         padding: 0 15px;
     }
+    
     // Icon close for all sections
     .bl-icon-close {
         top: 10px;
     }
-    // Icons in Main - Intro View
+    
+    // First block in Main - Intro View
     .bl-box {
+        // subtitle
         h1 {
           font-size: 16px;
           bottom: 20px;  
         }
+        // main Title
         h2 {
             i {
                 font-size: 30px;
                 margin-bottom: 10px;
             }
+            
+            &.main-title {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+// HEIGHT media queries
+
+@media screen and (max-height: 780px) {
+    // First block in Main - Intro View
+    .bl-box {
+        // subtitle
+        h1 {
+          bottom: 12px;  
         }
     }
 }

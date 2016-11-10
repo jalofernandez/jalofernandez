@@ -597,6 +597,9 @@ section.section-four .bl-content {
   }
 }
 @media screen and (max-width: 599px) {
+  .logointro {
+    margin-top: 20px;
+  }
   .bl-content,
   div.bl-panel-items > div > div {
     top: 40px;
@@ -615,5 +618,13 @@ section.section-four .bl-content {
   .bl-box h2 i {
     font-size: 30px;
     margin-bottom: 10px;
+  }
+  .bl-box h2.main-title {
+    padding-top: 0;
+  }
+}
+@media screen and (max-height: 780px) {
+  .bl-box h1 {
+    bottom: 12px;
   }
 }
