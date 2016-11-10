@@ -1,9 +1,19 @@
 /* ... VARIABLES ... */
 /* main Beige color */
+/* secondary Beige color */
 /* white color */
 /* --- common FONTS -------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Anton|Handlee|Raleway:400,600,700');
+.hand {
+  font-family: 'Handlee', verdana, sans-serif;
+}
+.upper {
+  font-family: 'Anton', cursive;
+  letter-spacing: 3px;
+}
+.text {
+  font-family: 'Raleway', Verdana, Geneva, sans-serif;
+}
 /* --- common MIXINS -------------------------------- */
 .text-block {
   font-size: 18px;
@@ -72,6 +82,7 @@ p {
 .subtext {
   padding-right: 10px;
   font-family: 'Handlee', verdana, sans-serif;
+  color: #e0d4bc;
   font-size: 1.2em;
   letter-spacing: .01em;
   text-transform: lowercase;
@@ -178,21 +189,25 @@ p {
   align-items: center;
 }
 .bl-box h2 {
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'Anton', cursive;
+  letter-spacing: 3px;
   margin: 0;
   padding: 20px;
   width: 100%;
   text-align: center;
   color: #cab68e;
   font-size: 2.2em;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 .bl-box h2 i {
-  padding-right: 15px;
-  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+  color: #e0d4bc;
+  font-size: 40px;
+  opacity: .8;
 }
 .bl-white h2 {
   color: #fff;
@@ -473,7 +488,8 @@ div.bl-panel-items.bl-panel-items-show nav span {
   transition: opacity 0.2s linear 0.5s;
 }
 .bl-box h1 {
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'Anton', cursive;
+  letter-spacing: 3px;
   margin-top: 0;
   color: #cab68e;
   font-size: 30px;
@@ -492,6 +508,7 @@ div.bl-panel-items.bl-panel-items-show nav span {
 }
 .bl-box h2.main-title {
   font-size: 3.5em;
+  letter-spacing: 0.01em;
   padding-bottom: 0;
   text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }

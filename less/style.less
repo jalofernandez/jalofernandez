@@ -2,8 +2,20 @@
 
 /* --- common FONTS -------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Anton|Handlee|Raleway:400,600,700');
+
+.hand {
+    font-family: 'Handlee', verdana, sans-serif;
+}
+
+.upper {
+    font-family: 'Anton', cursive;
+    letter-spacing: 3px;
+}
+
+.text {
+    font-family: 'Raleway', Verdana, Geneva, sans-serif;
+}
 
 /* --- common MIXINS -------------------------------- */
 
@@ -85,7 +97,8 @@ p {
 
 .subtext {
     padding-right: 10px;
-    font-family: 'Handlee', verdana, sans-serif;
+    .hand;
+    color: @second-color;
     font-size: 1.2em;
     letter-spacing: .01em;
     text-transform: lowercase;
@@ -99,7 +112,7 @@ p {
 }
 
 .logointro + p {
-    font-family: 'Handlee', verdana, sans-serif;
+    .hand;
     font-size: 20px !important;
     color: @main-color !important;
     letter-spacing: .02em !important;
@@ -203,21 +216,24 @@ p {
     align-items: center;
     
     h2 {
-        font-family: Impact, Charcoal, sans-serif;
+        .upper;
         margin: 0;
         padding: 20px;
         width: 100%;
         text-align: center;
         color: @main-color;
         font-size: 2.2em;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         .text-shadow;
         
         i {
-            padding-right: 15px;
-            color: @white;
+            display: block;
+            margin-bottom: 20px;
+            color: @second-color;          
+            font-size: 40px;
+            opacity: .8;
         }
     }
 }
@@ -248,7 +264,7 @@ div.bl-panel-items > div > div {
     
     // main Title
     h2 {
-        font-family: 'Handlee', verdana, sans-serif;
+        .hand;
         letter-spacing: .01em;
         font-size: 2.5em;
         font-weight: 300;
@@ -567,7 +583,7 @@ div.bl-panel-items {
 	transition: opacity 0.2s linear 0.5s;
     
     h1 {
-        font-family: Impact, Charcoal, sans-serif;
+        .upper;
         margin-top: 0;
         color: @main-color;
         font-size: 30px;
@@ -588,6 +604,7 @@ div.bl-panel-items {
         // Main Header Title in tablets & mobile devices
         &.main-title {
             font-size: 3.5em;
+            letter-spacing: 0.01em;
             padding-bottom: 0;
             .text-shadow;
         }
