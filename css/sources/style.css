@@ -596,3 +596,24 @@ section.section-four .bl-content {
     bottom: 35px;
   }
 }
+@media screen and (max-width: 599px) {
+  .bl-content,
+  div.bl-panel-items > div > div {
+    top: 40px;
+    left: 15px;
+    right: 15px;
+    bottom: 30px;
+    padding: 0 15px;
+  }
+  .bl-icon-close {
+    top: 10px;
+  }
+  .bl-box h1 {
+    font-size: 16px;
+    bottom: 20px;
+  }
+  .bl-box h2 i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
