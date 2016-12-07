@@ -1,25 +1,26 @@
 /*
 * Dependencias
 */
-var gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-cleanCSS = require('gulp-clean-css'),
-imagemin = require('gulp-imagemin'),
-    less = require('gulp-less'),
-    path = require('path'),
-    jade = require('gulp-jade'),
- sitemap = require('gulp-sitemap');
+   var gulp = require('gulp'),
+     concat = require('gulp-concat'),
+     uglify = require('gulp-uglify'),
+   cleanCSS = require('gulp-clean-css'),
+   imagemin = require('gulp-imagemin'),
+gulpIgnore  = require('gulp-ignore'),
+       less = require('gulp-less'),
+       path = require('path'),
+       jade = require('gulp-jade'),
+    sitemap = require('gulp-sitemap');
 
 /*
-* Configuración de la tarea 'default' (gulp) for Templates/Views and Styles DEVELOPMENT
+* Configuración de la tarea 'default' (gulp) last step to publish
 */
-gulp.task('default', ['less', 'css', 'jade']);
+gulp.task('default', ['sitemap', 'css']);
 
 /*
-* Configuración de la tarea 'deploy' (gulp deploy) for PRODUCTION upgrade
+* Configuración de la tarea 'deploy' (gulp) first step: compile
 */
-gulp.task('deploy', ['less', 'css', 'jade', 'img', 'js', 'sitemap']);
+gulp.task('deploy', ['js', 'jade', 'less', 'img']);
 
 /*
 * Configuración de la tarea 'js' --> gulp-concat + gulp-uglify (gulp js)
@@ -35,7 +36,7 @@ gulp.task('js', function () {
 * Configuración de la tarea 'css' --> gulp-clean-css (gulp css)
 */
 gulp.task('css', function() {
-  return gulp.src('css/sources/*.css')
+  return gulp.src('css/sources/style.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('css/dist'));
 });
@@ -48,16 +49,18 @@ gulp.task('img', function () {
         .pipe(imagemin())
         .pipe(gulp.dest('img/dist'));
 });
+
 /*
 * Configuración de la tarea 'less' --> gulp-less (gulp less)
 */
 gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
+  return gulp.src('./less/**/[^_]*.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
     .pipe(gulp.dest('./css/sources'));
 });
+
 /*
 * Configuración de la tarea 'jade' --> gulp-jade (gulp jade)
 */
@@ -69,6 +72,7 @@ gulp.task('jade', function () {
     }))
     .pipe(gulp.dest('./'));
 });
+
 /*
 * Configuración de la tarea 'sitemap' --> gulp-sitemap (gulp sitemap)
 */
