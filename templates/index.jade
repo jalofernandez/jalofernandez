@@ -9,14 +9,14 @@ html(lang='es')
     meta(name='keywords', content='')
     meta(name='author', content='')
     link(rel='shortcut icon', href='img/dist/favicon/favicon.ico')
-    // Custom Styles
+    //- Custom Styles
     link(rel='stylesheet', type='text/css', href='css/dist/style.css')
-    // Modernizr javascript
+    //- Modernizr javascript
     script(src='js/dist/modernizr.custom.js')
   body
     .container
       #bl-main.bl-main
-        //
+        //-
           /////////////////////////////////////////////////////////////////
           1 - FIRST BLOCK :: ABOUT ME (es) Primer cuadro :: sobre mí
           /////////////////////////////////////////////////////////////////////
@@ -90,7 +90,7 @@ html(lang='es')
                 p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
-        //
+        //-
           /////////////////////////////////////////////////////////////////
           2 - SECOND BLOCK :: SERVICES (es) Segundo cuadro :: Servicios
           /////////////////////////////////////////////////////////////////////
@@ -167,7 +167,7 @@ html(lang='es')
                 p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
-        //
+        //-
           /////////////////////////////////////////////////////////////////
           3 - THIRT BLOCK :: PORTFOLIO (es) Tercer cuadro :: Portafolio
           /////////////////////////////////////////////////////////////////////
@@ -181,36 +181,56 @@ html(lang='es')
             h2 Portafolio de Proyectos
             p Aquí te presentamos algunos de nuestros diseños e ideas de decoración:
             ul#bl-work-items
-              li(data-panel='panel-1')
-                a(href='#', title='')
-                  img(src='img/dist/images/1.jpg', alt='')
-              li(data-panel='panel-2')
-                a(href='#', title='')
-                  img(src='img/dist/images/2.jpg', alt='')
+              //- TEXTILE
               li(data-panel='panel-3')
                 a(href='#', title='')
-                  img(src='img/dist/images/3.jpg', alt='')
+                  img(src='img/dist/textiles/1.png', alt='')
+              //- DRAWS (sketch, comic...)
+              li(data-panel='panel-5')
+                a(href='#', title='')
+                  img(src='img/dist/draws/60.jpg', alt='')
+              //- PHOTOS    
               li(data-panel='panel-4')
                 a(href='#', title='')
-                  img(src='img/dist/images/4.jpg', alt='')
-              li(data-panel='panel-3')
-                a(href='#', title='')
-                  img(src='img/dist/images/3.jpg', alt='')
-              li(data-panel='panel-4')
-                a(href='#', title='')
-                  img(src='img/dist/images/4.jpg', alt='')
+                  img(src='img/dist/photos/1.jpg', alt='')
+              //- ARTS (graphics & logos)
               li(data-panel='panel-1')
                 a(href='#', title='')
-                  img(src='img/dist/images/1.jpg', alt='')
+                  img(src='img/dist/arts/1.png', alt='')
+              //- BUSINESS CARDS
+              li(data-panel='panel-6')
+                a(href='#', title='')
+                  img(src='img/dist/bcards/9.png', alt='')
+              //- FLYERS    
+              li(data-panel='panel-7')
+                a(href='#', title='')
+                  img(src='img/dist/flyers/5.png', alt='')
+              //- LABELS    
+              li(data-panel='panel-8')
+                a(href='#', title='')
+                  img(src='img/dist/labels/21.png', alt='')
+              //- LAYOUT    
+              li(data-panel='panel-9')
+                a(href='#', title='')
+                  img(src='img/dist/layout/1.png', alt='')
+              //- MERCHANDISING (packaging)
               li(data-panel='panel-2')
                 a(href='#', title='')
-                  img(src='img/dist/images/2.jpg', alt='')
+                  img(src='img/dist/merchan/17.png', alt='')
+              //- WEBSITES
+              li(data-panel='panel-2')
+                a(href='#', title='')
+                  img(src='img/dist/merchan/17.png', alt='')
+              //- VÍDEO
+              li(data-panel='panel-2')
+                a(href='#', title='')
+                  img(src='img/dist/merchan/17.png', alt='')
             .logo-block
                 img.logointro(src='img/dist/logos/jalofernandez-logo.svg', alt='Logotipo de Jalofernandez', title='Logotipo de Jalofernandez')
                 p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
-        //
+        //-
           /////////////////////////////////////////////////////////////////
           4 - FOURTH BLOCK :: CONTACT (es) Cuarto cuadro :: Contacto
           /////////////////////////////////////////////////////////////////////
@@ -243,63 +263,172 @@ html(lang='es')
             p Diseño y programación
           span.bl-icon.bl-icon-close
             i.fa.fa-close
-        //
+        //-
           /////////////////////////////////////////////////////////////////
           00 - ALL PANEL ITEMS FOR PORTFOLIO (es) desplegables del portafolio
           /////////////////////////////////////////////////////////////////////
         #bl-panel-work-items.bl-panel-items
-          // Panel items 1 :: WORKS
+          //- Panel items 1 :: Logotypes & Corporative works in Portfolio Section
           div(data-panel='panel-1')
             div
-              img(src='img/dist/images/1.jpg', alt='')
-              img(src='img/dist/images/1.jpg', alt='')
-              img(src='img/dist/images/1.jpg', alt='')
-              h3 Diseño de jardín:
-              p
-                | Para salvar el desnivel existente entre la cota de terraza y la de la piscina, se diseñó un banco corrido a lo largo del jardín, dando uso de bancada por el lado de la piscina.
-          // /.panel-1
-          // Panel items 2 :: WORKS
+              h3 Logotipos e imagen corporativa:
+              p ...
+              .clearfix
+              img(src='img/dist/arts/1.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/2.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/3.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/4.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/5.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/6.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/7.jpg', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/8.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/9.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/10.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/11.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/12.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/13.png', alt='Fotografía de animalicos')
+              img(src='img/dist/arts/14.png', alt='Fotografía de animalicos')
+              .clearfix
+          //- Panel items 2 :: Merchandising & Packaging works in Portfolio Section
           div(data-panel='panel-2')
             div
-              img(src='img/dist/images/2.jpg', alt='')
-              img(src='img/dist/images/2.jpg', alt='')
-              img(src='img/dist/images/2.jpg', alt='')
-              h3 Restaurante Fredy's
-              p
-                | Cambio de imagen con muy poco presupuesto y manteniendo el mobiliario existente. Se consiguió solucionar el problema del ruido instalando un friso de madera perimetral a media altura, y pallets de obra pintados en diferentes colores.
-          // /.panel-2
-          // Panel items 3 :: WORKS
+              h3 Merchandising & Packaging
+              p Cambio de imagen con muy poco presupuesto...
+              .clearfix
+              img(src='img/dist/merchan/17.png', alt='')
+              img(src='img/dist/merchan/18.png', alt='')
+              img(src='img/dist/merchan/19.png', alt='')
+              .clearfix
+          //- Panel items 3 :: Textile works in Portfolio Section
           div(data-panel='panel-3')
             div
+              h3 Diseños textiles:
+              p Diseños textiles realizados para las marcas internacionales Rusty y British Knights entre 2005 y 2011.
+              .clearfix
               img(src='img/dist/textiles/1.png', alt='')
               img(src='img/dist/textiles/2.png', alt='')
               img(src='img/dist/textiles/3.png', alt='')
               img(src='img/dist/textiles/4.png', alt='')
               img(src='img/dist/textiles/5.png', alt='')
               img(src='img/dist/textiles/6.png', alt='')
-              h3 Chalet en Majadahonda
-              p
-                | Se realizó una labor de interiorismo modificando y retapizando algunos muebles de los propietarios y adquiriendo otros nuevos.
-          // /.panel-3
-          // Panel items 4 :: WORKS
+              .clearfix
+          //- Panel items 4 :: Photography works in Portfolio Section
           div(data-panel='panel-4')
             div
-              img(src='img/dist/images/4.jpg', alt='')
-              img(src='img/dist/images/4.jpg', alt='')
-              img(src='img/dist/images/4.jpg', alt='')
-              h3 Reforma de vivienda en Pozuelo
-              p Reforma integral en unifamiliar.
-          // /.panel-4
+              h3 Fotografía profesional:
+              p Fotografía de producto, localizaciones y/o moda.
+              .clearfix
+              img(src='img/dist/photos/1.jpg', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/2.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/3.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/4.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/5.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/6.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/7.jpg', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/8.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/9.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/10.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/11.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/12.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/13.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/14.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/15.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/16.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/17.png', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/18.jpg', alt='Fotografía de animalicos')
+              img(src='img/dist/photos/51.jpg', alt='Fotografía de animalicos')
+              .clearfix
+          //- Panel items 5 :: Draws & handly artworks in Portfolio Section
+          div(data-panel='panel-5')
+            div
+              h3 Dibujos y artes:
+              p Ilustración a mano alzada, bocateje, comic, storyboards...
+              .clearfix
+              img(src='img/dist/draws/60.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/61.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/62.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/63.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/64.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/65.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/66.jpg', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/67.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/68.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/69.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/70.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/71.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/72.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/73.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/74.png', alt='Fotografía de animalicos')
+              img(src='img/dist/draws/75.png', alt='Fotografía de animalicos')
+              .clearfix
+          //- Panel items 6 :: Business Cards works in Portfolio Section
+          div(data-panel='panel-6')
+            div
+              h3 Tarjetas de visita:
+              p Diseños textiles realizados para las marcas internacionales Rusty y British Knights entre 2005 y 2011.
+              .clearfix
+              img(src='img/dist/bcards/9.png', alt='')
+              img(src='img/dist/bcards/10.png', alt='')
+              img(src='img/dist/bcards/11.png', alt='')
+              img(src='img/dist/bcards/12.png', alt='')
+              img(src='img/dist/bcards/20.png', alt='')
+              img(src='img/dist/bcards/29.png', alt='')
+              .clearfix
+          //- Panel items 7 :: Business Cards works in Portfolio Section
+          div(data-panel='panel-7')
+            div
+              h3 Flyers y cartelería:
+              p Diseños offset...
+              .clearfix
+              img(src='img/dist/flyers/5.png', alt='')
+              img(src='img/dist/flyers/6.png', alt='')
+              img(src='img/dist/flyers/7.png', alt='')
+              img(src='img/dist/flyers/8.png', alt='')
+              img(src='img/dist/flyers/30.png', alt='')
+              img(src='img/dist/flyers/31.png', alt='')
+              .clearfix
+          //- Panel items 8 :: Business Cards works in Portfolio Section
+          div(data-panel='panel-8')
+            div
+              h3 Etiquetas:
+              p Diseños textiles...
+              .clearfix
+              img(src='img/dist/labels/21.png', alt='')
+              img(src='img/dist/labels/22.png', alt='')
+              img(src='img/dist/labels/24.png', alt='')
+              .clearfix
+          //- Panel items 9 :: Business Cards works in Portfolio Section
+          div(data-panel='panel-9')
+            div
+              h3 Cartelería y maquetaciones:
+              p Maquetación, diseño editorial...
+              .clearfix
+              img(src='img/dist/layout/1.png', alt='')
+              img(src='img/dist/layout/2.png', alt='')
+              img(src='img/dist/layout/3.png', alt='')
+              img(src='img/dist/layout/4.png', alt='')
+              img(src='img/dist/layout/13.png', alt='')
+              img(src='img/dist/layout/14.png', alt='')
+              img(src='img/dist/layout/15.png', alt='')
+              img(src='img/dist/layout/16.png', alt='')
+              img(src='img/dist/layout/23.png', alt='')
+              img(src='img/dist/layout/30.png', alt='')
+              img(src='img/dist/layout/40.png', alt='')
+              img(src='img/dist/layout/41.png', alt='')
+              img(src='img/dist/layout/42.png', alt='')
+              img(src='img/dist/layout/43.png', alt='')
+              .clearfix
+          //- Navigation Controls
           nav
             span.bl-next-work > Siguiente
             span.bl-icon.bl-icon-close
               i.fa.fa-close
-        // /.bl-panel-items
-      // /.bl-main
-    // /.container
-    // Javascript jQuery
+        //- /.bl-panel-items
+      //- /.bl-main
+    //- /.container
+    //- Javascript jQuery
     script(src='js/dist/jquery.min.js')
-    // Javascripts concat & min
+    //- Javascripts concat & min
     script(src='js/dist/scripts-min.js')
     script.
       $(function() {

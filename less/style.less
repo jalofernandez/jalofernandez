@@ -400,7 +400,7 @@ div.bl-panel-items {
         top: 0;
         left: 0;
         position: absolute;
-        background: @main-color;
+        background: @black;
         z-index: 0;
         opacity: 0;
         -webkit-transform: translateY(0);
@@ -412,7 +412,7 @@ div.bl-panel-items {
         -ms-transform: translateY(0);
         
         & > div {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             opacity: 1;
             bottom: 90px;
@@ -424,20 +424,25 @@ div.bl-panel-items {
                 font-size: 2.4em;
                 font-weight: 300;
                 margin: 0 0 20px 0;
+                text-align: center;
+                border-bottom: 1px solid;
+                padding-bottom: 10px;
             }
             
             // text Paragraph
             p {
+                padding-top: 10px;
                 font-size: 1.3em;
+                text-align: center;
             }
             
             // Images
             img {
                 float: left;
-                margin: 0 20px 20px 0;
+                margin: 1%;
                 max-width: 100%;
-                width: 250px;
-                height: 250px;
+                width: 30%;
+                height: auto
             }
         }
         
