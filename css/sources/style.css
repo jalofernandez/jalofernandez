@@ -1,19 +1,23 @@
 /* ... VARIABLES ... */
-/* main Beige color */
+/* @main-color: #cab68e;  main Beige color */
+/* @second-color: #333; secondary Beige color */
+/* @main-text: @white;  white color */
+/* main Brown almost Black color */
 /* secondary Beige color */
-/* white color */
+/* main Brown almost Black color */
+/* light Mrown color */
 /* --- common FONTS -------------------------------- */
 @import "font-awesome.css";
-@import url('https://fonts.googleapis.com/css?family=Anton|Handlee|Raleway:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand|Raleway:400,600,700');
 .hand {
-  font-family: 'Handlee', verdana, sans-serif;
+  font-family: 'Parisienne', cursive;
 }
 .upper {
-  font-family: 'Anton', cursive;
+  font-family: 'Quicksand', sans-serif;
   letter-spacing: 3px;
 }
 .text {
-  font-family: 'Raleway', Verdana, Geneva, sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 /* --- common MIXINS -------------------------------- */
 .text-block {
@@ -29,9 +33,6 @@
 }
 .italic {
   font-style: italic;
-}
-.text-shadow {
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 .clearfix:before,
 .clearfix:after {
@@ -63,6 +64,32 @@ body {
   font-size: 0.9em;
   font-weight: 300;
 }
+/* --- CUSTOM SCROLL BAR -------------------------------- */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ebcd86;
+  border: 0px none #fff;
+  border-radius: 10px;
+}
+/* --- TEXT SELECTOR -------------------------------- */
+::-webkit-selection {
+  background-color: #ebcd86;
+  color: #191304;
+  text-shadow: none;
+}
+::-moz-selection {
+  background-color: #ebcd86;
+  color: #191304;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ebcd86;
+  color: #191304;
+  text-shadow: none;
+}
 /* --- common LINKS -------------------------------- */
 a {
   color: #0ec2a1;
@@ -82,8 +109,8 @@ p {
 }
 .subtext {
   padding-right: 10px;
-  font-family: 'Handlee', verdana, sans-serif;
-  color: #e0d4bc;
+  font-family: 'Parisienne', cursive;
+  color: #191304;
   font-size: 1.2em;
   letter-spacing: .01em;
   text-transform: lowercase;
@@ -93,12 +120,13 @@ p {
   height: auto;
   margin-top: 50px;
 }
-.logointro + p {
-  font-family: 'Handlee', verdana, sans-serif;
+.logointro + p,
+.logotext {
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 3px;
   font-size: 20px !important;
-  color: #cab68e !important;
-  letter-spacing: .02em !important;
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+  color: #191304 !important;
+  letter-spacing: .01em !important;
 }
 /* --- common CONTAINER - MAIN FRAME -------------------------------- */
 .container {
@@ -109,7 +137,12 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(../../img/dist/bg/main-bg.jpg);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf7ec+0,ffffff+100 */
+  background: #fcf7ec;
+  background: -moz-linear-gradient(top, #fcf7ec 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(top, #fcf7ec 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #fcf7ec 0%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf7ec', endColorstr='#ffffff', GradientType=0);
 }
 .bl-main > section {
   position: absolute;
@@ -154,7 +187,7 @@ p {
   transition: all 150ms ease-in;
 }
 .bl-main > section .bl-icon-close:hover {
-  color: #cab68e;
+  color: #ebcd86;
   -moz-transition: all 150ms ease-in;
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
@@ -190,28 +223,27 @@ p {
   align-items: center;
 }
 .bl-box h2 {
-  font-family: 'Anton', cursive;
+  font-family: 'Quicksand', sans-serif;
   letter-spacing: 3px;
   margin: 0;
   padding: 20px;
   width: 100%;
   text-align: center;
-  color: #cab68e;
+  color: #191304;
   font-size: 2.2em;
   font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 .bl-box h2 i {
   display: block;
   margin-bottom: 20px;
-  color: #e0d4bc;
+  color: #ebcd86;
   font-size: 40px;
   opacity: .8;
 }
 .bl-white h2 {
-  color: #fff;
+  color: #191304;
 }
 /* --- common CONTENT for All views -------------------------------- */
 .bl-content,
@@ -228,24 +260,24 @@ div.bl-panel-items > div > div {
   overflow-y: auto;
 }
 .bl-content h2 {
-  font-family: 'Handlee', verdana, sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-size: 2.8em;
   letter-spacing: .01em;
-  font-size: 2.5em;
   font-weight: 300;
-  color: #cab68e;
-  border-bottom: 1px solid #cab68e;
-  margin: 0 0 20px 0;
+  color: #191304;
+  text-align: center;
+  line-height: 65px;
+  margin: 0 0 15px 0;
 }
 .bl-content p {
   margin: 0 auto;
   padding-bottom: 15px;
-  color: #fff;
+  color: #191304;
   font-size: 1.7em;
   line-height: 1.8;
 }
 .bl-content p span {
-  color: #cab68e;
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+  color: #c89621;
 }
 .bl-content p a,
 .bl-content p a i {
@@ -253,23 +285,33 @@ div.bl-panel-items > div > div {
 }
 .bl-content p a:hover,
 .bl-content p a i:hover {
-  color: #cab68e;
+  color: #191304;
   -moz-transition: all 150ms ease-in;
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
 }
 .bl-content p.contact-phone {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 3px;
   font-size: 22px;
   font-weight: 400;
 }
 .bl-content p.contact-phone a {
+  color: #191304;
   font-size: 22px;
   font-weight: 400;
 }
+.bl-content p.contact-socialmedia a {
+  color: #c89621;
+}
+.bl-content p.contact-socialmedia a:hover,
+.bl-content p.contact-socialmedia a:focus,
+.bl-content p.contact-socialmedia a:active {
+  color: #191304;
+}
 .bl-content i {
-  color: #fff;
+  color: #ebcd86;
   font-size: 35px;
   padding: 0 5px;
 }
@@ -300,8 +342,7 @@ div.bl-panel-items > div > div {
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #cab68e;
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+  color: #c89621;
 }
 .bl-content article h3 i {
   font-size: 1em;
@@ -311,7 +352,7 @@ div.bl-panel-items > div > div {
 }
 .bl-content article p {
   padding-left: 35px;
-  color: #fff;
+  color: #111;
   font-size: 18px;
   letter-spacing: 0.02em;
   line-height: 25px;
@@ -340,7 +381,7 @@ div.bl-panel-items > div {
   top: 0;
   left: 0;
   position: absolute;
-  background: #111;
+  background: #191304;
   z-index: 0;
   opacity: 0;
   -webkit-transform: translateY(0);
@@ -360,27 +401,24 @@ div.bl-panel-items > div > div {
   pointer-events: auto;
 }
 div.bl-panel-items > div > div h3 {
+  font-family: 'Parisienne', cursive;
   font-size: 2.4em;
   font-weight: 300;
   margin: 0 0 20px 0;
   text-align: center;
-  border-bottom: 1px solid;
   padding-bottom: 10px;
 }
 div.bl-panel-items > div > div p {
+  color: #fff;
   padding-top: 10px;
   font-size: 1.3em;
   text-align: center;
 }
-div.bl-panel-items > div > div a {
+div.bl-panel-items > div > div img {
   float: left;
   margin: 1%;
   max-width: 100%;
   width: 30%;
-  height: auto;
-}
-div.bl-panel-items > div > div a img {
-  width: 100%;
   height: auto;
 }
 div.bl-panel-items > div.bl-show-work {
@@ -497,10 +535,10 @@ div.bl-panel-items.bl-panel-items-show nav span {
   transition: opacity 0.2s linear 0.5s;
 }
 .bl-box h1 {
-  font-family: 'Anton', cursive;
+  font-family: 'Quicksand', sans-serif;
   letter-spacing: 3px;
   margin-top: 0;
-  color: #cab68e;
+  color: #191304;
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -519,7 +557,6 @@ div.bl-panel-items.bl-panel-items-show nav span {
   font-size: 3.5em;
   letter-spacing: 0.01em;
   padding-bottom: 0;
-  text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 section.bl-expand .bl-box {
   opacity: 0;
@@ -637,59 +674,5 @@ section.section-four .bl-content {
 @media screen and (max-height: 780px) {
   .bl-box h1 {
     bottom: 12px;
-  }
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-@media screen and (max-width: 700px) {
-  .box {
-    width: 70%;
-  }
-  .popup {
-    width: 70%;
   }
 }

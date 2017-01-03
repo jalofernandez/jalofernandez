@@ -4,19 +4,24 @@
 
 @import "font-awesome.css";
 
-@import url('https://fonts.googleapis.com/css?family=Anton|Handlee|Raleway:400,600,700');
+// @import url('https://fonts.googleapis.com/css?family=Anton|Handlee|Raleway:400,600,700');
+
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand|Raleway:400,600,700');
 
 .hand {
-    font-family: 'Handlee', verdana, sans-serif;
+    font-family: 'Parisienne', cursive;
+    // font-family: 'Handlee', verdana, sans-serif;
 }
 
 .upper {
-    font-family: 'Anton', cursive;
+    font-family: 'Quicksand', sans-serif;
+    // font-family: 'Anton', cursive;
     letter-spacing: 3px;
 }
 
 .text {
-    font-family: 'Raleway', Verdana, Geneva, sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    // font-family: 'Raleway', Verdana, Geneva, sans-serif;
 }
 
 /* --- common MIXINS -------------------------------- */
@@ -39,7 +44,7 @@
 }
 
 .text-shadow {
-    text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+    // text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
 }
 
 // Clearfix to floats behaviour
@@ -75,6 +80,37 @@ body {
     font-weight: 300;
 }
 
+/* --- CUSTOM SCROLL BAR -------------------------------- */
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @second-color;
+  border: 0px none @white;
+  border-radius: 10px;
+}
+
+/* --- TEXT SELECTOR -------------------------------- */
+
+::-webkit-selection {
+    background-color: @second-color;
+    color: @main-color;
+    text-shadow: none;
+}
+::-moz-selection {
+    background-color: @second-color;
+    color: @main-color;
+    text-shadow: none;
+}
+::selection {
+    background-color: @second-color;
+    color: @main-color;
+    text-shadow: none;
+}
+
 /* --- common LINKS -------------------------------- */
 
 a {
@@ -100,7 +136,7 @@ p {
 .subtext {
     padding-right: 10px;
     .hand;
-    color: @second-color;
+    color: @main-color;
     font-size: 1.2em;
     letter-spacing: .01em;
     text-transform: lowercase;
@@ -113,11 +149,12 @@ p {
     margin-top: 50px;
 }
 
-.logointro + p {
-    .hand;
+.logointro + p,
+.logotext {
+    .upper;
     font-size: 20px !important;
     color: @main-color !important;
-    letter-spacing: .02em !important;
+    letter-spacing: .01em !important;
     .text-shadow;
 }
 
@@ -133,7 +170,13 @@ p {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-    background-image: url(../../img/dist/bg/main-bg.jpg);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf7ec+0,ffffff+100 */
+    background: #fcf7ec;
+    background: -moz-linear-gradient(top,  #fcf7ec 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top,  #fcf7ec 0%,#ffffff 100%);
+    background: linear-gradient(to bottom,  #fcf7ec 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf7ec', endColorstr='#ffffff',GradientType=0 );
+    // background-image: url(../../img/dist/bg/main-bg.jpg);
     
     & > section {
         position: absolute;
@@ -180,7 +223,7 @@ p {
             .anim-150;
             
             &:hover {
-                color: @main-color;
+                color: @second-color;
                 .anim-150;
             }
         }
@@ -242,7 +285,7 @@ p {
 
 .bl-white {
     h2 {
-        color:@white;
+        color: @main-color;
     }
 }
 
@@ -267,12 +310,14 @@ div.bl-panel-items > div > div {
     // main Title
     h2 {
         .hand;
+        font-size: 2.8em;
         letter-spacing: .01em;
-        font-size: 2.5em;
         font-weight: 300;
         color: @main-color;
-        border-bottom: 1px solid @main-color;
-        margin: 0 0 20px 0;
+        text-align: center;
+        line-height: 65px;
+        // border-bottom: 1px solid @main-color;
+        margin: 0 0 15px 0;
     }
     
     // Text paragraph
@@ -284,7 +329,7 @@ div.bl-panel-items > div > div {
         line-height: 1.8;
         
         span {
-            color: @main-color;
+            color: @title-text;
             .text-shadow;
         }
         
@@ -299,20 +344,31 @@ div.bl-panel-items > div > div {
         }
         
         &.contact-phone {
-            font-family: Verdana, Geneva, sans-serif;
+            .upper;
             font-size: 22px;
             font-weight: 400;
             
             a {
+                color: @main-color;
                 font-size: 22px;
                 font-weight: 400;
+            }
+        }
+        
+        &.contact-socialmedia {
+            a {
+                color: @title-text;
+            
+                &:hover, &:focus, &:active {
+                    color: @main-color;
+                }
             }
         }
     }
     
     // Icons
     i {
-        color: @white;
+        color: @second-color;
         font-size: 35px;
         padding: 0 5px;
     }
@@ -351,7 +407,7 @@ div.bl-panel-items > div > div {
             font-size: 22px;
             font-weight: 400;
             letter-spacing: 1px;
-            color: @main-color;
+            color: @title-text;
             .text-shadow;
             
             i {
@@ -365,7 +421,7 @@ div.bl-panel-items > div > div {
         
         p {
             padding-left: 35px;
-            color: @white;
+            color: @black;
             .text-block;
             
             i {
@@ -400,7 +456,7 @@ div.bl-panel-items {
         top: 0;
         left: 0;
         position: absolute;
-        background: @black;
+        background: @main-color;
         z-index: 0;
         opacity: 0;
         -webkit-transform: translateY(0);
@@ -421,16 +477,17 @@ div.bl-panel-items {
             
             // main Title
             h3 {
+                .hand;
                 font-size: 2.4em;
                 font-weight: 300;
                 margin: 0 0 20px 0;
                 text-align: center;
-                border-bottom: 1px solid;
                 padding-bottom: 10px;
             }
             
             // text Paragraph
             p {
+                color: @white;
                 padding-top: 10px;
                 font-size: 1.3em;
                 text-align: center;
