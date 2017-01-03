@@ -563,10 +563,10 @@ div.bl-panel-items.bl-panel-items-show nav span {
   letter-spacing: 3px;
   margin-top: 0;
   color: #1e0a02;
-  font-size: 30px;
+  font-size: 33px;
   letter-spacing: 0.03em;
   position: relative;
-  bottom: 22px;
+  bottom: 18px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -582,7 +582,7 @@ div.bl-panel-items.bl-panel-items-show nav span {
   padding-bottom: 0;
 }
 .bl-box h2.main-title span {
-  opacity: .5;
+  color: #f68b5b;
 }
 section.bl-expand .bl-box {
   opacity: 0;
