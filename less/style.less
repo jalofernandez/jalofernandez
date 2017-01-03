@@ -170,13 +170,17 @@ p {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf7ec+0,ffffff+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf7ec+0,ffffff+100 
     background: #fcf7ec;
     background: -moz-linear-gradient(top,  #fcf7ec 0%, #ffffff 100%);
     background: -webkit-linear-gradient(top,  #fcf7ec 0%,#ffffff 100%);
     background: linear-gradient(to bottom,  #fcf7ec 0%,#ffffff 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf7ec', endColorstr='#ffffff',GradientType=0 );
     // background-image: url(../../img/dist/bg/main-bg.jpg);
+    */
+    background-color: #fff;
+    background-image: linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
     
     & > section {
         position: absolute;
@@ -230,6 +234,14 @@ p {
     }
 }
 
+@media all and (min-width: 768px) {
+    .bl-main {
+        background-image: 
+        linear-gradient(90deg, transparent 79px, #f9ad8b 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    }
+}
+
 // SECTION "BOXES" (OTHER VIEWS)
 .bl-box {
 	position: relative;
@@ -266,11 +278,11 @@ p {
         padding: 20px;
         width: 100%;
         text-align: center;
-        color: @main-color;
+        color: @second-color;
         font-size: 2.2em;
         font-weight: 400;
         letter-spacing: 0.03em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         .text-shadow;
         
         i {
@@ -278,7 +290,7 @@ p {
             margin-bottom: 20px;
             color: @second-color;          
             font-size: 40px;
-            opacity: .8;
+            opacity: .5;
         }
     }
 }
@@ -335,7 +347,7 @@ div.bl-panel-items > div > div {
         
         a,
         a i {
-            color: @white;
+            color: @second-color;
             
             &:hover {
                 color: @main-color;
@@ -349,15 +361,20 @@ div.bl-panel-items > div > div {
             font-weight: 400;
             
             a {
-                color: @main-color;
+                color: @second-color;
                 font-size: 22px;
                 font-weight: 400;
+                
+                &:hover, &:focus, &:active {
+                    color: @main-color;
+                }
             }
         }
         
         &.contact-socialmedia {
-            a {
-                color: @title-text;
+            a,
+            a i {
+                color: @second-color;
             
                 &:hover, &:focus, &:active {
                     color: @main-color;
@@ -368,7 +385,7 @@ div.bl-panel-items > div > div {
     
     // Icons
     i {
-        color: @second-color;
+        color: @title-text;
         font-size: 35px;
         padding: 0 5px;
     }
@@ -435,6 +452,13 @@ div.bl-panel-items > div > div {
     .logo-block {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .bl-content, 
+    div.bl-panel-items > div > div {
+        left: 90px;
     }
 }
 
@@ -651,7 +675,7 @@ div.bl-panel-items {
         margin-top: 0;
         color: @main-color;
         font-size: 30px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         letter-spacing: 0.03em;
         position: relative;
         bottom: 22px;
@@ -671,6 +695,10 @@ div.bl-panel-items {
             letter-spacing: 0.01em;
             padding-bottom: 0;
             .text-shadow;
+            
+            span {
+                opacity: .5;
+            }
         }
     }
 }
@@ -766,7 +794,7 @@ section.section-four {
         }
     }
     .bl-main > section:hover {
-        background-color: rgba(255,255,255,.05);
+        background-color: rgba(255,255,255,.07);
     }
     
     /* ... "Sobre Mi" & "Mis Habilidades" Sections ... */

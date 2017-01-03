@@ -2,10 +2,10 @@
 /* @main-color: #cab68e;  main Beige color */
 /* @second-color: #333; secondary Beige color */
 /* @main-text: @white;  white color */
+/* main Orange almost Black color */
+/* Flame Orange secondary color */
 /* main Brown almost Black color */
-/* secondary Beige color */
-/* main Brown almost Black color */
-/* light Mrown color */
+/* Medium Orange third color */
 /* --- common FONTS -------------------------------- */
 @import "font-awesome.css";
 @import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand|Raleway:400,600,700');
@@ -70,24 +70,24 @@ body {
   height: 3px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ebcd86;
+  background: #f35e1a;
   border: 0px none #fff;
   border-radius: 10px;
 }
 /* --- TEXT SELECTOR -------------------------------- */
 ::-webkit-selection {
-  background-color: #ebcd86;
-  color: #191304;
+  background-color: #f35e1a;
+  color: #1e0a02;
   text-shadow: none;
 }
 ::-moz-selection {
-  background-color: #ebcd86;
-  color: #191304;
+  background-color: #f35e1a;
+  color: #1e0a02;
   text-shadow: none;
 }
 ::selection {
-  background-color: #ebcd86;
-  color: #191304;
+  background-color: #f35e1a;
+  color: #1e0a02;
   text-shadow: none;
 }
 /* --- common LINKS -------------------------------- */
@@ -110,7 +110,7 @@ p {
 .subtext {
   padding-right: 10px;
   font-family: 'Parisienne', cursive;
-  color: #191304;
+  color: #1e0a02;
   font-size: 1.2em;
   letter-spacing: .01em;
   text-transform: lowercase;
@@ -125,7 +125,7 @@ p {
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 3px;
   font-size: 20px !important;
-  color: #191304 !important;
+  color: #1e0a02 !important;
   letter-spacing: .01em !important;
 }
 /* --- common CONTAINER - MAIN FRAME -------------------------------- */
@@ -137,12 +137,17 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf7ec+0,ffffff+100 */
-  background: #fcf7ec;
-  background: -moz-linear-gradient(top, #fcf7ec 0%, #ffffff 100%);
-  background: -webkit-linear-gradient(top, #fcf7ec 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, #fcf7ec 0%, #ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf7ec', endColorstr='#ffffff', GradientType=0);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcf7ec+0,ffffff+100 
+    background: #fcf7ec;
+    background: -moz-linear-gradient(top,  #fcf7ec 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top,  #fcf7ec 0%,#ffffff 100%);
+    background: linear-gradient(to bottom,  #fcf7ec 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf7ec', endColorstr='#ffffff',GradientType=0 );
+    // background-image: url(../../img/dist/bg/main-bg.jpg);
+    */
+  background-color: #fff;
+  background-image: linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
 }
 .bl-main > section {
   position: absolute;
@@ -187,11 +192,16 @@ p {
   transition: all 150ms ease-in;
 }
 .bl-main > section .bl-icon-close:hover {
-  color: #ebcd86;
+  color: #f35e1a;
   -moz-transition: all 150ms ease-in;
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
+}
+@media all and (min-width: 768px) {
+  .bl-main {
+    background-image: linear-gradient(90deg, transparent 79px, #f9ad8b 79px, #abced4 81px, transparent 81px), linear-gradient(#eee 0.1em, transparent 0.1em);
+  }
 }
 .bl-box {
   position: relative;
@@ -229,21 +239,20 @@ p {
   padding: 20px;
   width: 100%;
   text-align: center;
-  color: #191304;
+  color: #f35e1a;
   font-size: 2.2em;
   font-weight: 400;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 .bl-box h2 i {
   display: block;
   margin-bottom: 20px;
-  color: #ebcd86;
+  color: #f35e1a;
   font-size: 40px;
-  opacity: .8;
+  opacity: .5;
 }
 .bl-white h2 {
-  color: #191304;
+  color: #1e0a02;
 }
 /* --- common CONTENT for All views -------------------------------- */
 .bl-content,
@@ -264,7 +273,7 @@ div.bl-panel-items > div > div {
   font-size: 2.8em;
   letter-spacing: .01em;
   font-weight: 300;
-  color: #191304;
+  color: #1e0a02;
   text-align: center;
   line-height: 65px;
   margin: 0 0 15px 0;
@@ -272,20 +281,20 @@ div.bl-panel-items > div > div {
 .bl-content p {
   margin: 0 auto;
   padding-bottom: 15px;
-  color: #191304;
+  color: #1e0a02;
   font-size: 1.7em;
   line-height: 1.8;
 }
 .bl-content p span {
-  color: #c89621;
+  color: #f68b5b;
 }
 .bl-content p a,
 .bl-content p a i {
-  color: #fff;
+  color: #f35e1a;
 }
 .bl-content p a:hover,
 .bl-content p a i:hover {
-  color: #191304;
+  color: #1e0a02;
   -moz-transition: all 150ms ease-in;
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
@@ -298,20 +307,29 @@ div.bl-panel-items > div > div {
   font-weight: 400;
 }
 .bl-content p.contact-phone a {
-  color: #191304;
+  color: #f35e1a;
   font-size: 22px;
   font-weight: 400;
 }
-.bl-content p.contact-socialmedia a {
-  color: #c89621;
+.bl-content p.contact-phone a:hover,
+.bl-content p.contact-phone a:focus,
+.bl-content p.contact-phone a:active {
+  color: #1e0a02;
+}
+.bl-content p.contact-socialmedia a,
+.bl-content p.contact-socialmedia a i {
+  color: #f35e1a;
 }
 .bl-content p.contact-socialmedia a:hover,
+.bl-content p.contact-socialmedia a i:hover,
 .bl-content p.contact-socialmedia a:focus,
-.bl-content p.contact-socialmedia a:active {
-  color: #191304;
+.bl-content p.contact-socialmedia a i:focus,
+.bl-content p.contact-socialmedia a:active,
+.bl-content p.contact-socialmedia a i:active {
+  color: #1e0a02;
 }
 .bl-content i {
-  color: #ebcd86;
+  color: #f68b5b;
   font-size: 35px;
   padding: 0 5px;
 }
@@ -342,7 +360,7 @@ div.bl-panel-items > div > div {
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #c89621;
+  color: #f68b5b;
 }
 .bl-content article h3 i {
   font-size: 1em;
@@ -365,6 +383,12 @@ div.bl-panel-items > div > div {
   width: 100%;
   text-align: center;
 }
+@media all and (min-width: 768px) {
+  .bl-content,
+  div.bl-panel-items > div > div {
+    left: 90px;
+  }
+}
 /* --- common SubSECTION "PORTFOLIO" - "WORKS" -------------------------------- */
 div.bl-panel-items {
   width: 100%;
@@ -381,7 +405,7 @@ div.bl-panel-items > div {
   top: 0;
   left: 0;
   position: absolute;
-  background: #191304;
+  background: #1e0a02;
   z-index: 0;
   opacity: 0;
   -webkit-transform: translateY(0);
@@ -538,9 +562,8 @@ div.bl-panel-items.bl-panel-items-show nav span {
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 3px;
   margin-top: 0;
-  color: #191304;
+  color: #1e0a02;
   font-size: 30px;
-  text-transform: uppercase;
   letter-spacing: 0.03em;
   position: relative;
   bottom: 22px;
@@ -557,6 +580,9 @@ div.bl-panel-items.bl-panel-items-show nav span {
   font-size: 3.5em;
   letter-spacing: 0.01em;
   padding-bottom: 0;
+}
+.bl-box h2.main-title span {
+  opacity: .5;
 }
 section.bl-expand .bl-box {
   opacity: 0;
@@ -614,7 +640,7 @@ section.section-four .bl-content {
     padding-top: 0;
   }
   .bl-main > section:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.07);
   }
   /* ... "Sobre Mi" & "Mis Habilidades" Sections ... */
   section.section-one .bl-content article,
