@@ -88,7 +88,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: @second-color;
+  background: @title-text;
   border: 0px none @white;
   border-radius: 10px;
 }
@@ -583,6 +583,10 @@ div.bl-panel-items {
         nav {
             opacity: 1;
 	        top: -70px;
+            background-color: @bg-btn;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            color: @second-color;
             
             span {
                 float: left;
@@ -673,7 +677,7 @@ div.bl-panel-items {
     h1 {
         .upper;
         margin-top: 0;
-        color: @main-color;
+        color: lighten(@main-color, 5%);
         font-size: 33px;
         // text-transform: uppercase;
         letter-spacing: 0.03em;
@@ -864,6 +868,9 @@ section.section-four {
     // Icon close for all sections
     .bl-icon-close {
         top: 10px;
+        float: right !important;
+        font-size: 25px;
+        padding-right: 5px;
     }
     
     // First block in Main - Intro View
@@ -894,7 +901,7 @@ section.section-four {
     .bl-box {
         // subtitle
         h1 {
-          bottom: 12px;  
+            bottom: 5px; 
         }
     }
 }
