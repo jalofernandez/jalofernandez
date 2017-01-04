@@ -787,39 +787,53 @@ section.section-four .bl-content {
     font-size: 1.8em;
   }
 }
+/* todo: fix media queries Height
+
 @media (max-width: 480px) and (max-height: 780px) {
-  .bl-main > section:first-child {
-    height: 50%;
-    top: 0;
-    left: 0;
-  }
-  .bl-main > section:nth-child(2) {
-    height: 50%;
-    top: 50%;
-    left: 0;
-    width: 33%;
-  }
-  .bl-main > section:nth-child(3) {
-    height: 50%;
-    top: 50%;
-    left: 33%;
-    width: 33%;
-  }
-  .bl-main > section:nth-child(3) .bl-content h2 {
-    color: #f68b5b;
-  }
-  .bl-main > section:nth-child(4) {
-    height: 50%;
-    top: 50%;
-    left: 66%;
-    width: 33%;
-  }
+    // MAIN FRAME (INDEX VIEW)
+    .bl-main > section {
+
+            &:first-child {
+                height: 50%;
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                height: 50%;
+                top: 50%;
+                left: 0;
+                width: 33%;
+            }
+
+            &:nth-child(3) {
+                height: 50%;
+                top: 50%;
+                left: 33%;
+                width: 33%;
+
+                .bl-content {
+                    h2 {
+                        color: @title-text;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                height: 50%;
+                top: 50%;
+                left: 66%;
+                width: 33%;
+            }
+    }
 }
+
 @media (max-width: 480px) and (max-height: 668px) {
-  .logointro {
-    margin-top: 20px;
-  }
-  .bl-box h2.main-title {
-    padding-top: 0;
-  }
+    .logointro {
+        margin-top: 20px;
+    }
+    .bl-box h2.main-title {
+        padding-top: 0;
+    }
 }
+*/
