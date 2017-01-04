@@ -7,7 +7,7 @@
 /* main Brown almost Black color */
 /* Medium Orange third color */
 /* @bg-btn: rgba(246,139,91,.8);  Medium Orange with opacity */
-/* Medium Orange with opacity */
+/* White with opacity */
 /* --- common FONTS -------------------------------- */
 @import "font-awesome.css";
 @import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand|Raleway:400,600,700');
@@ -20,6 +20,11 @@
 }
 .text {
   font-family: 'Quicksand', sans-serif;
+}
+.text-default {
+  font-family: 'Raleway', Verdana, Geneva, sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
 }
 /* --- common MIXINS -------------------------------- */
 .text-block {
@@ -35,6 +40,12 @@
 }
 .italic {
   font-style: italic;
+}
+.box-shadow {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.box-shadow-hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 .clearfix:before,
 .clearfix:after {
@@ -60,11 +71,11 @@ html {
   box-sizing: border-box;
 }
 body {
+  background: #fff;
   font-family: 'Raleway', Verdana, Geneva, sans-serif;
-  color: #f2ede3;
-  background: #333;
   font-size: 0.9em;
   font-weight: 300;
+  color: #f68b5b;
 }
 /* --- CUSTOM SCROLL BAR -------------------------------- */
 ::-webkit-scrollbar {
@@ -173,6 +184,9 @@ p {
   left: 0;
   /* background:rgba(224,248,244,0.95); */
 }
+.bl-main > section:nth-child(3) .bl-content h2 {
+  color: #f68b5b;
+}
 .bl-main > section:nth-child(4) {
   height: 22%;
   top: 78%;
@@ -182,7 +196,7 @@ p {
 .bl-main > section .bl-icon-close {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 40px;
   cursor: pointer;
   z-index: 100;
   opacity: 0;
@@ -199,11 +213,6 @@ p {
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
-}
-@media all and (min-width: 768px) {
-  .bl-main {
-    background-image: linear-gradient(90deg, transparent 79px, #f9ad8b 79px, #abced4 81px, transparent 81px), linear-gradient(#eee 0.1em, transparent 0.1em);
-  }
 }
 .bl-box {
   position: relative;
@@ -344,10 +353,17 @@ div.bl-panel-items > div > div {
   display: inline-block;
   width: 30%;
   margin: 1%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .bl-content > ul li a {
   display: block;
-  padding: 0;
+  padding: 1px;
 }
 .bl-content > ul li a img {
   display: block;
@@ -385,12 +401,6 @@ div.bl-panel-items > div > div {
   width: 100%;
   text-align: center;
 }
-@media all and (min-width: 768px) {
-  .bl-content,
-  div.bl-panel-items > div > div {
-    left: 90px;
-  }
-}
 /* --- common SubSECTION "PORTFOLIO" - "WORKS" -------------------------------- */
 div.bl-panel-items {
   width: 100%;
@@ -407,7 +417,7 @@ div.bl-panel-items > div {
   top: 0;
   left: 0;
   position: absolute;
-  background: #1e0a02;
+  background-color: #fff;
   z-index: 0;
   opacity: 0;
   -webkit-transform: translateY(0);
@@ -492,15 +502,39 @@ div.bl-panel-items nav span.bl-next-work {
 }
 div.bl-panel-items.bl-panel-items-show nav {
   opacity: 1;
-  top: -70px;
-  background-color: rgba(30, 10, 2, 0.8);
+  top: -40px;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  color: #f35e1a;
+  width: 100%;
+  left: 0;
+  margin-left: 0;
+  cursor: pointer;
 }
 div.bl-panel-items.bl-panel-items-show nav span {
+  width: 50%;
   float: left;
-  margin: 5px;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 3px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+div.bl-panel-items.bl-panel-items-show nav span:first-child {
+  float: left !important;
+  color: #f68b5b;
+}
+div.bl-panel-items.bl-panel-items-show nav span:last-child {
+  float: right !important;
+  color: #f35e1a;
+}
+div.bl-panel-items.bl-panel-items-show nav span i {
+  padding: 0 5px;
 }
 .bl-panel-items img {
   cursor: pointer;
@@ -639,14 +673,32 @@ section.section-four .bl-content {
     margin: 0;
     margin-bottom: 4%;
   }
+  div.bl-panel-items > div > div img {
+    width: 100%;
+    margin-bottom: 3%;
+  }
 }
+/* ..... (breakpoint) NOT TABLETS & MOBILE DEVICES ...................... */
 @media screen and (min-width: 768px) {
+  .bl-content,
+  div.bl-panel-items > div > div {
+    left: 90px;
+  }
+  .bl-main {
+    background-image: linear-gradient(90deg, transparent 79px, #f9ad8b 79px, #abced4 81px, transparent 81px), linear-gradient(#eee 0.1em, transparent 0.1em);
+  }
+  .bl-content > ul li:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
   .bl-box h2.main-title {
     font-size: 70px;
     padding-top: 0;
   }
   .bl-main > section:hover {
     background-color: rgba(255, 255, 255, 0.07);
+  }
+  div.bl-panel-items.bl-panel-items-show nav span:hover {
+    color: #1e0a02 !important;
   }
   /* ... "Sobre Mi" & "Mis Habilidades" Sections ... */
   section.section-one .bl-content article,
@@ -670,12 +722,18 @@ section.section-four .bl-content {
     min-height: 145px;
   }
 }
-@media screen and (max-width: 768px) {
+/* ..... (breakpoint) TABLETS & SMALL DEVICES ...................... */
+@media screen and (max-width: 767px) {
   .bl-box h1 {
     font-size: 16px;
     bottom: 35px;
   }
+  .bl-main > section .bl-icon-close {
+    top: 5px;
+    right: 20px;
+  }
 }
+/* ..... (breakpoint) SMARTPHONES and MOBILE DEVICES ...................... */
 @media screen and (max-width: 599px) {
   .logointro {
     margin-top: 20px;
@@ -706,6 +764,7 @@ section.section-four .bl-content {
     padding-top: 0;
   }
 }
+/* ..... (breakpoint) HEIGHT media queries ...................... */
 @media screen and (max-height: 780px) {
   .bl-box h1 {
     bottom: 5px;

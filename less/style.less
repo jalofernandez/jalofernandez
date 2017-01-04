@@ -24,6 +24,12 @@
     // font-family: 'Raleway', Verdana, Geneva, sans-serif;
 }
 
+.text-default {
+    font-family: 'Raleway', Verdana, Geneva, sans-serif;
+    font-size: 0.9em;
+    font-weight: 300;
+}  
+
 /* --- common MIXINS -------------------------------- */
 
 .text-block {
@@ -45,6 +51,13 @@
 
 .text-shadow {
     // text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000, -1px -1px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.box-shadow {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+}
+.box-shadow-hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), 0 3px 3px rgba(0,0,0,.2);
 }
 
 // Clearfix to floats behaviour
@@ -73,11 +86,9 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 }
 
 body {
-    font-family: 'Raleway', Verdana, Geneva, sans-serif;
-    color: #f2ede3;
-    background: @grey-3;
-    font-size: 0.9em;
-    font-weight: 300;
+    background: @white;
+    .text-default;
+    color: @title-text;
 }
 
 /* --- CUSTOM SCROLL BAR -------------------------------- */
@@ -205,6 +216,12 @@ p {
             top: 56%;
             left: 0;
             /* background:rgba(224,248,244,0.95); */
+            
+            .bl-content {
+                h2 {
+                    color: @title-text;
+                }
+            }
         }
         
         &:nth-child(4) {
@@ -218,7 +235,7 @@ p {
         .bl-icon-close {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 40px;
             cursor: pointer;
             z-index: 100;
             opacity: 0;
@@ -231,14 +248,6 @@ p {
                 .anim-150;
             }
         }
-    }
-}
-
-@media all and (min-width: 768px) {
-    .bl-main {
-        background-image: 
-        linear-gradient(90deg, transparent 79px, #f9ad8b 79px, #abced4 81px, transparent 81px),
-        linear-gradient(#eee .1em, transparent .1em);
     }
 }
 
@@ -400,11 +409,17 @@ div.bl-panel-items > div > div {
             display: inline-block;
             width: 30%;
             margin: 1%;
+            background-color: @bg-opacity;
+            .box-shadow;
+            -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            -ms-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
             
             a {
                 display: block;
-                padding: 0;
-                // border: 8px solid rgba(0,0,0,0.1);
+                padding: 1px;
                 
                 img {
                     display: block;
@@ -455,13 +470,6 @@ div.bl-panel-items > div > div {
     }
 }
 
-@media all and (min-width: 768px) {
-    .bl-content, 
-    div.bl-panel-items > div > div {
-        left: 90px;
-    }
-}
-
 
 /* --- common SubSECTION "PORTFOLIO" - "WORKS" -------------------------------- */
 
@@ -480,7 +488,7 @@ div.bl-panel-items {
         top: 0;
         left: 0;
         position: absolute;
-        background: @main-color;
+        background-color: @white;
         z-index: 0;
         opacity: 0;
         -webkit-transform: translateY(0);
@@ -582,15 +590,40 @@ div.bl-panel-items {
     &.bl-panel-items-show {
         nav {
             opacity: 1;
-	        top: -70px;
-            background-color: @bg-btn;
+	        top: -40px;
+            background-color: @bg-opacity;
             -webkit-border-radius: 3px;
             border-radius: 3px;
-            color: @second-color;
+            width: 100%;
+            left: 0;
+            margin-left: 0;
+            cursor: pointer;
             
             span {
+                width: 50%;
                 float: left;
-                margin: 5px;
+                margin: 0;
+                .upper;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: center;
+                .anim-150;
+                
+                // Close section BTN
+                &:first-child {
+                    float: left !important;
+                    color: @title-text;
+                }
+                
+                // Next section BTN
+                &:last-child {
+                    float: right !important;
+                    color: @second-color;
+                }
+                
+                i {
+                    padding: 0 5px;
+                }
             }
         }
     }
@@ -787,11 +820,36 @@ section.section-four {
         margin: 0;
         margin-bottom: 4%;
 	}
+    
+    div.bl-panel-items > div > div img {
+        width: 100%;
+        margin-bottom: 3%;
+    }
 }
 
-// NOT TABLETS & MOBILE DEVICES:
+/* ..... (breakpoint) NOT TABLETS & MOBILE DEVICES ...................... */
 
 @media screen and (min-width: 768px) {
+    
+    // to add more margin left to allow show typical notebook vertical line
+    .bl-content, 
+    div.bl-panel-items > div > div {
+        left: 90px;
+    }
+    
+    // to show typical notebook vertical line
+    .bl-main {
+        background-image: 
+        linear-gradient(90deg, transparent 79px, #f9ad8b 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    }
+    
+    // to increase the natural box shadow with a bigger hover effect one
+    .bl-content > ul li:hover {
+        .box-shadow-hover;
+    }
+
+    // main title big size
     .bl-box {
         h2.main-title {
            font-size: 70px;
@@ -800,6 +858,16 @@ section.section-four {
     }
     .bl-main > section:hover {
         background-color: rgba(255,255,255,.07);
+    }
+    
+    // to change color text in portfolio buttons
+    div.bl-panel-items.bl-panel-items-show nav span:hover {
+        color: @main-color !important;
+    }
+    
+    // common top close icon with cursor pointer
+    .bl-main > section .bl-icon-close {
+        cursor: pointer;
     }
     
     /* ... "Sobre Mi" & "Mis Habilidades" Sections ... */
@@ -836,18 +904,26 @@ section.section-four {
     }
 }
 
-// TABLETS & SMALL DEVICES:
+/* ..... (breakpoint) TABLETS & SMALL DEVICES ...................... */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    
+    // main Text header with small size
     .bl-box {
         h1 {
            font-size: 16px;
            bottom: 35px;
         }
     }
+    
+    // common top close icon with default position changed
+    .bl-main > section .bl-icon-close {
+        top: 5px;
+        right: 20px;
+    }
 }
 
-// SMARTPHONES and MOBILE DEVICES
+/* ..... (breakpoint) SMARTPHONES and MOBILE DEVICES ...................... */
 
 @media screen and (max-width: 599px) {
     // Main Logo in Main - Intro View
@@ -894,7 +970,7 @@ section.section-four {
     }
 }
 
-// HEIGHT media queries
+/* ..... (breakpoint) HEIGHT media queries ...................... */
 
 @media screen and (max-height: 780px) {
     // First block in Main - Intro View
