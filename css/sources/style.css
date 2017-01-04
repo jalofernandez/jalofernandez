@@ -786,6 +786,8 @@ section.section-four .bl-content {
   .bl-box h2 {
     font-size: 1.8em;
   }
+}
+@media (max-width: 480px) and (max-height: 780px) {
   .bl-main > section:first-child {
     height: 50%;
     top: 0;
@@ -813,7 +815,7 @@ section.section-four .bl-content {
     width: 33%;
   }
 }
-@media screen and (max-height: 668px) {
+@media (max-width: 480px) and (max-height: 668px) {
   .logointro {
     margin-top: 20px;
   }
