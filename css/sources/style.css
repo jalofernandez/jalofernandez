@@ -678,6 +678,17 @@ section.section-four .bl-content {
     margin-bottom: 3%;
   }
 }
+/* ..... (breakpoint) VERY BIG SCREEM DEVISES ...................... */
+@media screen and (min-width: 1699px) {
+  .bl-content > ul li {
+    width: 18%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .bl-content > ul li {
+    width: 23%;
+  }
+}
 /* ..... (breakpoint) NOT TABLETS & MOBILE DEVICES ...................... */
 @media screen and (min-width: 768px) {
   .bl-content,
@@ -699,6 +710,9 @@ section.section-four .bl-content {
   }
   div.bl-panel-items.bl-panel-items-show nav span:hover {
     color: #1e0a02 !important;
+  }
+  .bl-main > section .bl-icon-close {
+    cursor: pointer;
   }
   /* ... "Sobre Mi" & "Mis Habilidades" Sections ... */
   section.section-one .bl-content article,
@@ -768,5 +782,42 @@ section.section-four .bl-content {
 @media screen and (max-height: 780px) {
   .bl-box h1 {
     bottom: 5px;
+  }
+  .bl-box h2 {
+    font-size: 1.8em;
+  }
+  .bl-main > section:first-child {
+    height: 50%;
+    top: 0;
+    left: 0;
+  }
+  .bl-main > section:nth-child(2) {
+    height: 50%;
+    top: 50%;
+    left: 0;
+    width: 33%;
+  }
+  .bl-main > section:nth-child(3) {
+    height: 50%;
+    top: 50%;
+    left: 33%;
+    width: 33%;
+  }
+  .bl-main > section:nth-child(3) .bl-content h2 {
+    color: #f68b5b;
+  }
+  .bl-main > section:nth-child(4) {
+    height: 50%;
+    top: 50%;
+    left: 66%;
+    width: 33%;
+  }
+}
+@media screen and (max-height: 668px) {
+  .logointro {
+    margin-top: 20px;
+  }
+  .bl-box h2.main-title {
+    padding-top: 0;
   }
 }

@@ -827,6 +827,22 @@ section.section-four {
     }
 }
 
+/* ..... (breakpoint) VERY BIG SCREEM DEVISES ...................... */
+
+@media screen and (min-width: 1699px) {
+    // portfolio items width
+    .bl-content > ul li {
+        width: 18%;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    // portfolio items width
+    .bl-content > ul li {
+        width: 23%;
+    }
+}
+
 /* ..... (breakpoint) NOT TABLETS & MOBILE DEVICES ...................... */
 
 @media screen and (min-width: 768px) {
@@ -979,16 +995,58 @@ section.section-four {
         h1 {
             bottom: 5px; 
         }
+        // section titles
+        h2 {
+           font-size: 1.8em; 
+        }
+    }
+    
+    // MAIN FRAME (INDEX VIEW)
+    .bl-main > section {
+
+            &:first-child {
+                height: 50%;
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                height: 50%;
+                top: 50%;
+                left: 0;
+                width: 33%;
+            }
+
+            &:nth-child(3) {
+                height: 50%;
+                top: 50%;
+                left: 33%;
+                width: 33%;
+
+                .bl-content {
+                    h2 {
+                        color: @title-text;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                height: 50%;
+                top: 50%;
+                left: 66%;
+                width: 33%;
+            }
     }
 }
 
-
-
-
-
-
-
-
+@media screen and (max-height: 668px) {
+    .logointro {
+        margin-top: 20px;
+    }
+    .bl-box h2.main-title {
+        padding-top: 0;
+    }
+}
 
 
 
